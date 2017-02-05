@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>İTÜ ROVER TAKIMI</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+     <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+  </head>
+  <body>
+<br>
+<div class="container">
+<form class="form-horizontal" method="POST" action="">{% csrf_token %}
+                            <div class="col-md-1 text-center"><i class="fa fa-user bigicon"></i></div>
+                            <div class="col-md-11">
+                                <input id="id_name" name="name" type="text" placeholder="İsim Soyisim veya RUMUZ" class="form-control" {% if check %} value="{{ name }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name.errors }}</h6>
+                                {% endif %}
+                            </div>
+                            </div>
+                          <br>
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-6">
+        <div class="well well-md">
+        <fieldset style="center">
+                        <legend class="text-center header">Ekip Üyeleri</legend>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-gavel bigicon"></i></span>
+                            <div class="col-md-5">
+                              <h6>Tunç Türker</h6>
+                            </div>
+                        </div>
+                        <br></br>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-flask bigicon"></i></span>
+                            <div class="col-md-8">
+                              <h4>Science Sub-Team</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                        <h6>Caner Aslan</h6>
+                        <h6>Zeynep Selin Başaran</h6>
+                        <h6>Hazel Alan</h6>
+                        <h6>Bahadır Onur Güdürü</h6>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-wrench bigicon"></i></span>
+                            <div class="col-md-8">
+                              <h4>Mechanical Sub-Team</h4>
+                            </div>
+                        <div class="col-md-8 col-md-offset-2">
+                        <h6>Öner Altınbağ</h6>
+                        <h6>Kuzey Kızgınkaya</h6>
+                        <h6>Ahmet Hakan Duman</h6>
+                        <h6>Kaan Öznur</h6>
+                        <h6>Yasin Yağın</h6>
+                        <h6>Şıhmehmet Yıldız</h6>
+                        <h6>Bartu Demirci</h6>
+                        <h6>Bugay Çağlar</h6>
+                        <h6>Sami Korkmaz</h6>
+                        </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-code bigicon"></i></span>
+                            <div class="col-md-8">
+                              <h4>Software Sub-Team</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                        <h6>Vatan Aksoy Tezer</h6>
+                        <h6>Ferhat Metin</h6>
+                        <h6>Garen Haddeler</h6>
+                        <h6>Burak Hüseyin Kurt</h6>
+                        <h6>Celaleddin Hidayetoğlu</h6>
+                        <h6>Taha Mert Gökdemir</h6>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                              <h4>Public Relations & Finance</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                        <h6>Sevdenur Erol</h6>
+                        <h6>Yiğithan Yılmaz</h6>
+                        <h6>Ege Batuhan Akgül</h6>
+                        <h6>Bahadır Umaç</h6>
+                        <h6>Muhammet Tarık Tamyürek</h6>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-wifi bigicon"></i></span>
+                            <div class="col-md-8">
+                              <h4>Electronic Sub-Team</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                        <h6>Eray Tuncan</h6>
+                        <h6>Oğuzhan Demiriz</h6>
+                        <h6>Şule Öztürk</h6>
+                        <h6>Muhammed Şeker</h6>
+                        </div>
+                        </fieldset>
+        </div>
+        </div>
+        <div class="col-md-6">
+            <div class="well well-md">
+                    <fieldset style="center">
+                        <legend class="text-center header">Sizce Amerika'ya gitmesi gereken İLK 10 kişi.</legend>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name0" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name0 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name0.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name1" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name1 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name1.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name2" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name2 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name2.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name3" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name3 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name3.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name4" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name4 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name4.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name5" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name5 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name5.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name6" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name6 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name6.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name7" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name7 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name7.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name8" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name8 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name8.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-child bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="id_name" name="name9" type="text" placeholder="İsim Soyisim" class="form-control" {% if check %} value="{{ name9 }}" {% endif %} />
+                                {% if check %}
+                                <h6>{{ form.name9.errors }}</h6>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                            <h4>Listeyi Göndermeden Önce Tüm Alanları Doldurduğunuzdan Emin Olun.</h4>
+                                <button type="submit" class="btn btn-primary btn-lg">Gönder Gelsin</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form> 
+            </div>
+        </div>
+</div>
+
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 20px;
+        padding: 0px;
+    }
+
+    .bigicon {
+        font-size: 30px;
+        color: #36A0FF;
+    }
+</style>
+<!-- Contact Form - END -->
+
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
