@@ -16,11 +16,6 @@ def bemember(request):
 			name2 = request.POST['name2']
 			name3 = request.POST['name3']
 			name4 = request.POST['name4']
-			name5 = request.POST['name5']
-			name6 = request.POST['name6']
-			name7 = request.POST['name7']
-			name8 = request.POST['name8']
-			name9 = request.POST['name9']
 			context={"form" : form,
 					 "check" : True,
 					 "name": name,
@@ -29,13 +24,8 @@ def bemember(request):
 					 "name2": name2,
 					 "name3": name3,
 					 "name4": name4,
-					 "name5": name5,
-					 "name6": name6,
-					 "name7": name7,
-					 "name8": name8,
-					 "name9": name9,
 					 }
-			return render(request, "base.html", context)
+			return render(request, "base2.html", context)
 	else:
 		context={"check" : False,}
-		return render(request, "base.html", context)
+		return render(request, "base2.html", context)

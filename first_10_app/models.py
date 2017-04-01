@@ -13,11 +13,6 @@ class Member(models.Model):
 	name2 = models.CharField(max_length = 120)
 	name3 = models.CharField(max_length = 120)
 	name4 = models.CharField(max_length = 120)
-	name5 = models.CharField(max_length = 120)
-	name6 = models.CharField(max_length = 120)
-	name7 = models.CharField(max_length = 120)
-	name8 = models.CharField(max_length = 120)
-	name9 = models.CharField(max_length = 120)
 
 	def __unicode__(self):
 			return self.name
